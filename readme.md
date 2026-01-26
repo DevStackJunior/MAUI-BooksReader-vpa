@@ -22,7 +22,6 @@ Transformation du Format de la donnée en étapes : EPUB - STRING - ???
 
 LOAD_FILE() |
 Binaire -> LONGBLOB |
-LONGBLOB |
 
 ## Back-End AdonisJS
 
@@ -106,3 +105,4 @@ o Par lesquels on peut filtrer les livres présentés
 7.1.5 Importer les epubs
 • Créer un script SQL pour importer les epubs dans la base de données dans un
 champ de type BLOB.
+
