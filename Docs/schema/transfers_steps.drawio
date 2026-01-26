@@ -1,0 +1,93 @@
+<mxfile host="app.diagrams.net" modified="2026-01-26T14:30:00.000Z" agent="Gemini" version="21.0.0">
+  <diagram name="Flux_Ultra_Detaille_BLOB" id="extreme-detail-flow">
+    <mxGraphModel dx="2000" dy="1200" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="1169">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <mxCell id="title_read" value="FLUX DE RÉCUPÉRATION (LECTURE / DISPLAY)" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="40" y="40" width="400" height="30" as="geometry" />
+        </mxCell>
+
+        <mxCell id="r1" value="1. SQL ENGINE&#10;Action: Disk I/O&#10;Fonction: Page Reader&#10;Format: LONGBLOB raw" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;fillColor=#dae8fc;" vertex="1" parent="1">
+          <mxGeometry x="40" y="100" width="180" height="80" as="geometry" />
+        </mxCell>
+
+        <mxCell id="r2" value="2. DRIVER MYSQL2&#10;Action: RowDataPacket&#10;Fonction: castBinary()&#10;Format: Uint8Array" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;fillColor=#dae8fc;" vertex="1" parent="1">
+          <mxGeometry x="260" y="100" width="180" height="80" as="geometry" />
+        </mxCell>
+
+        <mxCell id="r3" value="3. LUCID ORM&#10;Action: Model Hydration&#10;Fonction: Book.find(id)&#10;Format: NodeJS Buffer" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;fillColor=#d5e8d4;" vertex="1" parent="1">
+          <mxGeometry x="480" y="100" width="180" height="80" as="geometry" />
+        </mxCell>
+
+        <mxCell id="r4" value="4. ADONIS RESPONSE&#10;Action: HTTP Stream&#10;Fonction: response.send()&#10;Header: app/epub+zip" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;fillColor=#d5e8d4;" vertex="1" parent="1">
+          <mxGeometry x="700" y="100" width="180" height="80" as="geometry" />
+        </mxCell>
+
+        <mxCell id="r5" value="5. RÉSEAU / TCP&#10;Action: Fragmentation&#10;Fonction: MTU Packetizing&#10;Format: Binary Stream" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;" vertex="1" parent="1">
+          <mxGeometry x="920" y="100" width="180" height="80" as="geometry" />
+        </mxCell>
+
+        <mxCell id="r6" value="6. MAUI HTTPCLIENT&#10;Action: Async Stream&#10;Fonction: GetStreamAsync()&#10;Format: HttpContent Stream" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;fillColor=#ffe6cc;" vertex="1" parent="1">
+          <mxGeometry x="1140" y="100" width="180" height="80" as="geometry" />
+        </mxCell>
+
+        <mxCell id="r7" value="7. MAUI PERSISTANCE&#10;Action: Disk Write&#10;Fonction: WriteAllBytesAsync()&#10;Path: CacheDirectory" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;fillColor=#ffe6cc;" vertex="1" parent="1">
+          <mxGeometry x="1360" y="100" width="180" height="80" as="geometry" />
+        </mxCell>
+
+        <mxCell id="ar1" edge="1" parent="1" source="r1" target="r2" />
+        <mxCell id="ar2" edge="1" parent="1" source="r2" target="r3" />
+        <mxCell id="ar3" edge="1" parent="1" source="r3" target="r4" />
+        <mxCell id="ar4" edge="1" parent="1" source="r4" target="r5" />
+        <mxCell id="ar5" edge="1" parent="1" source="r5" target="r6" />
+        <mxCell id="ar6" edge="1" parent="1" source="r6" target="r7" />
+
+        <mxCell id="title_write" value="FLUX D'INSERTION (ÉCRITURE / UPLOAD)" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="40" y="240" width="400" height="30" as="geometry" />
+        </mxCell>
+
+        <mxCell id="w1" value="1. MAUI PICKER&#10;Action: File Selection&#10;Fonction: OpenReadAsync()&#10;Format: FileStream" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;fillColor=#ffe6cc;" vertex="1" parent="1">
+          <mxGeometry x="40" y="300" width="180" height="80" as="geometry" />
+        </mxCell>
+
+        <mxCell id="w2" value="2. MAUI ENCAPSULATION&#10;Action: Multipart Creation&#10;Fonction: StreamContent()&#10;Format: POST Multi-part" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;fillColor=#ffe6cc;" vertex="1" parent="1">
+          <mxGeometry x="260" y="300" width="180" height="80" as="geometry" />
+        </mxCell>
+
+        <mxCell id="w3" value="3. ADONIS BODYPARSER&#10;Action: Stream Interception&#10;Fonction: request.file()&#10;Vigilance: client_max_body" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;fillColor=#d5e8d4;" vertex="1" parent="1">
+          <mxGeometry x="480" y="300" width="180" height="80" as="geometry" />
+        </mxCell>
+
+        <mxCell id="w4" value="4. OS FILE SYSTEM&#10;Action: Tmp Writing&#10;Fonction: file.moveToDisk()&#10;Format: Local Tmp File" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;fillColor=#d5e8d4;" vertex="1" parent="1">
+          <mxGeometry x="700" y="300" width="180" height="80" as="geometry" />
+        </mxCell>
+
+        <mxCell id="w5" value="5. FS READ&#10;Action: Buffer Conversion&#10;Fonction: fs.readFile()&#10;Format: NodeJS Buffer" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;fillColor=#d5e8d4;" vertex="1" parent="1">
+          <mxGeometry x="920" y="300" width="180" height="80" as="geometry" />
+        </mxCell>
+
+        <mxCell id="w6" value="6. LUCID SAVE&#10;Action: SQL Bindings&#10;Fonction: Book.create()&#10;Vigilance: Binary encoding" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;fillColor=#d5e8d4;" vertex="1" parent="1">
+          <mxGeometry x="1140" y="300" width="180" height="80" as="geometry" />
+        </mxCell>
+
+        <mxCell id="w7" value="7. MYSQL ENGINE&#10;Action: Write Operation&#10;Fonction: Binary Logging&#10;Format: LONGBLOB On-Disk" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;fillColor=#dae8fc;" vertex="1" parent="1">
+          <mxGeometry x="1360" y="300" width="180" height="80" as="geometry" />
+        </mxCell>
+
+        <mxCell id="aw1" edge="1" parent="1" source="w1" target="w2" />
+        <mxCell id="aw2" edge="1" parent="1" source="w2" target="w3" />
+        <mxCell id="aw3" edge="1" parent="1" source="w3" target="w4" />
+        <mxCell id="aw4" edge="1" parent="1" source="w4" target="w5" />
+        <mxCell id="aw5" edge="1" parent="1" source="w5" target="w6" />
+        <mxCell id="aw6" edge="1" parent="1" source="w6" target="w7" />
+
+        <mxCell id="vigilance" value="POINTS DE VIGILANCE CRITIQUES&#10;&#10;[DB] max_allowed_packet = 64M (Empêche le crash SQL sur l'upload)&#10;[API] BodyParser limit = 64MB (Autorise Adonis à recevoir le binaire)&#10;[MOBILE] GetStreamAsync (Évite OutOfMemory sur Android)&#10;[MYSQL] Type LONGBLOB (Indispensable pour fichiers > 64KB)" style="text;html=1;strokeColor=#b85450;fillColor=#f8cecc;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=1;fontSize=12;spacingLeft=10;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="40" y="440" width="500" height="120" as="geometry" />
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

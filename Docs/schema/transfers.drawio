@@ -1,0 +1,53 @@
+<mxfile host="app.diagrams.net" modified="2026-01-26T16:00:00.000Z" agent="Gemini" version="21.0.0">
+  <diagram name="Flux_Complet_EPUB_BLOB_Final" id="integrated-flow">
+    <mxGraphModel dx="1600" dy="1000" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <mxCell id="zone_sql" value="DATABASE : MYSQL (DOCKER)" style="swimlane;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="40" y="40" width="300" height="720" as="geometry" />
+        </mxCell>
+        <mxCell id="sql_table" value="TABLE: BOOKS&#10;• id (INT)&#10;• title (VARCHAR)&#10;• epub (LONGBLOB)" style="shape=cylinder3;whiteSpace=wrap;html=1;fillColor=#ffffff;" vertex="1" parent="zone_sql">
+          <mxGeometry x="70" y="60" width="160" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="sql_vigilance" value="&lt;b&gt;VIGILANCE DOCKER&lt;/b&gt;&#10;• max_allowed_packet=64M&#10;• Type LONGBLOB (capacité 4Go)&#10;• Privilège FILE pour LOAD_FILE" style="text;html=1;strokeColor=#b85450;fillColor=#f8cecc;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=1;fontSize=10;spacingLeft=5;" vertex="1" parent="zone_sql">
+          <mxGeometry x="30" y="580" width="240" height="100" as="geometry" />
+        </mxCell>
+
+        <mxCell id="zone_api" value="BACKEND : ADONISJS API" style="swimlane;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="420" y="40" width="340" height="720" as="geometry" />
+        </mxCell>
+        <mxCell id="api_read" value="&lt;b&gt;FLUX RÉCUPÉRATION (READ)&lt;/b&gt;&#10;1. Lucid .find() : SQL -&gt; Buffer&#10;2. Header: application/epub+zip&#10;3. response.send(buffer)" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;align=left;spacingLeft=10;fillColor=#f5f5f5;" vertex="1" parent="zone_api">
+          <mxGeometry x="30" y="60" width="280" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="api_write" value="&lt;b&gt;FLUX INSERTION (WRITE)&lt;/b&gt;&#10;1. request.file('epub') (Tmp)&#10;2. file.moveToDisk() (Validation)&#10;3. Book.create() (Buffer -&gt; SQL)" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;align=left;spacingLeft=10;fillColor=#f5f5f5;" vertex="1" parent="zone_api">
+          <mxGeometry x="30" y="220" width="280" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="api_vigilance" value="&lt;b&gt;VIGILANCE API&lt;/b&gt;&#10;• Config bodyparser: size=64mb&#10;• Driver mysql2 pour Buffers&#10;• Séparer JSON (Infos) et BIN (Blob)" style="text;html=1;strokeColor=#82b366;fillColor=#ffffff;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=1;fontSize=10;spacingLeft=5;" vertex="1" parent="zone_api">
+          <mxGeometry x="30" y="580" width="280" height="100" as="geometry" />
+        </mxCell>
+
+        <mxCell id="zone_maui" value="FRONTEND : MAUI (ANDROID)" style="swimlane;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="840" y="40" width="280" height="720" as="geometry" />
+        </mxCell>
+        <mxCell id="maui_read" value="&lt;b&gt;FLUX LECTURE (DISPLAY)&lt;/b&gt;&#10;1. HttpClient.GetStreamAsync()&#10;2. File.WriteAllBytesAsync()&#10;3. Ouverture liseuse (Local Path)" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;align=left;spacingLeft=10;fillColor=#f5f5f5;" vertex="1" parent="zone_maui">
+          <mxGeometry x="25" y="60" width="230" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="maui_write" value="&lt;b&gt;FLUX IMPORT (UPLOAD)&lt;/b&gt;&#10;1. File.ReadAllBytesAsync()&#10;2. MultipartFormDataContent&#10;3. PostAsync() to API" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;align=left;spacingLeft=10;fillColor=#f5f5f5;" vertex="1" parent="zone_maui">
+          <mxGeometry x="25" y="220" width="230" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="maui_vigilance" value="&lt;b&gt;VIGILANCE MOBILE&lt;/b&gt;&#10;• FileSystem.CacheDirectory&#10;• Async/Await impératif&#10;• Permission stockage Android" style="text;html=1;strokeColor=#d6b656;fillColor=#ffffff;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=1;fontSize=10;spacingLeft=5;" vertex="1" parent="zone_maui">
+          <mxGeometry x="20" y="580" width="240" height="100" as="geometry" />
+        </mxCell>
+
+        <mxCell id="flow_r1" value="SQL Binary" style="edgeStyle=orthogonalEdgeStyle;strokeWidth=3;strokeColor=#007FFF;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="sql_table" target="api_read" />
+        <mxCell id="flow_r2" value="HTTP Stream" style="edgeStyle=orthogonalEdgeStyle;strokeWidth=3;strokeColor=#007FFF;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="api_read" target="maui_read" />
+
+        <mxCell id="flow_w1" value="Multipart POST" style="edgeStyle=orthogonalEdgeStyle;strokeWidth=3;strokeColor=#FF0000;exitX=0;exitY=0.5;entryX=1;entryY=0.5;" edge="1" parent="1" source="maui_write" target="api_write" />
+        <mxCell id="flow_w2" value="Buffer Injection" style="edgeStyle=orthogonalEdgeStyle;strokeWidth=3;strokeColor=#FF0000;exitX=0;exitY=0.5;entryX=1;entryY=0.75;" edge="1" parent="1" source="api_write" target="sql_table" />
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
