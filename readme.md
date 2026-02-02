@@ -2,6 +2,8 @@
 
 Ce document synthétise le flux de transformation des données binaires, de la base de données MySQL jusqu'à l'affichage dans l'application mobile MAUI.
 
+---
+
 ## Synthèse du Flux de Données
 
 | Étape            | État de la donnée   | Composant          | Action clé                              |
@@ -15,6 +17,8 @@ Ce document synthétise le flux de transformation des données binaires, de la b
 ---
 
 [https://gemini.google.com/app/04377331fdb27f92] (Détails Projet)
+
+---
 
 ## Détails Techniques par Composant
 
@@ -44,5 +48,13 @@ Le flux binaire est écrit sur le disque local via File.WriteAllBytesAsync() dan
 ## Flux de Lecture LONGBLOB : 
 <img width="844" height="507" alt="READING_LONGBLOB" src="https://github.com/user-attachments/assets/f7b8629b-f1b8-427e-9e60-79442645fb20" />
 
+---
+
+## 1. Importation epubs
+### Initialisation Projet
+
+* **Configuration du schéma :** Définition de la structure de la table via l'outil de migration d'AdonisJS pour réserver un emplacement de stockage binaire haute capacité dédié aux fichiers.
+* **Synchronisation logicielle :** Liaison de la propriété de données avec le moteur d'AdonisJS pour permettre la manipulation et la lecture fluide des fichiers par l'application.
+* **Initialisation automatique :** Utilisation du seeder intégré pour injecter les fichiers par défaut en base de données afin de rendre le projet immédiatement opérationnel.
 
 
