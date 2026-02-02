@@ -3,50 +3,12 @@ import Book from '#models/book'
 import Category from '#models/category'
 import User from '#models/user'
 import Writer from '#models/writer'
-import fs from 'node:fs'
-import path from 'node:path'
 
 export default class extends BaseSeeder {
   async run() {
     const categories = await Category.query().orderBy('id', 'asc')
     const users = await User.query().orderBy('id', 'asc')
     const writers = await Writer.query().orderBy('id', 'asc')
-
-    const filePathBook1 = path.join(
-      process.cwd(),
-      'database/seeders/assets/Dickens, Charles - A Christmas Carol.epub'
-    )
-    const epubBuffer1 = fs.readFileSync(filePathBook1)
-
-    const filePathBook2 = path.join(
-      process.cwd(),
-      'database/seeders/assets/Dickens, Charles - Oliver Twist.epub'
-    )
-    const epubBuffer2 = fs.readFileSync(filePathBook2)
-
-    const filePathBook3 = path.join(
-      process.cwd(),
-      'database/seeders/assets/Doyle, Artur Conan - Sherlock Holmes.epub'
-    )
-    const epubBuffer3 = fs.readFileSync(filePathBook3)
-
-    const filePathBook4 = path.join(
-      process.cwd(),
-      'database/seeders/assets/Dumas, Alexandre - Les trois mousquetaires.epub'
-    )
-    const epubBuffer4 = fs.readFileSync(filePathBook4)
-
-    const filePathBook5 = path.join(
-      process.cwd(),
-      'database/seeders/assets/La Fontaine, Jean de - Fables.epub'
-    )
-    const epubBuffer5 = fs.readFileSync(filePathBook5)
-
-    const filePathBook6 = path.join(
-      process.cwd(),
-      'database/seeders/assets/Verne, Jules - Le tour du monde en quatre-vingts jours.epub'
-    )
-    const epubBuffer6 = fs.readFileSync(filePathBook6)
 
     await Book.createMany([
       {
@@ -55,7 +17,6 @@ export default class extends BaseSeeder {
         pdfLink: 'https://example.com/petit-prince.pdf',
         abstract:
           "Un aviateur, exilé dans le désert du Sahara, rencontre un petit prince venu d'une autre planète.",
-        epubBlob: epubBuffer1,
         editor: 'Gallimard',
         editionYear: 1943,
         imagePath: '/images/petit-prince.jpg',
@@ -69,7 +30,6 @@ export default class extends BaseSeeder {
         pdfLink: 'https://example.com/1984.pdf',
         abstract:
           'Dans une société totalitaire où Big Brother surveille chaque citoyen, Winston Smith tente de résister.',
-        epubBlob: epubBuffer2,
         editor: 'Secker & Warburg',
         editionYear: 1949,
         imagePath: '/images/1984.jpg',
@@ -83,7 +43,6 @@ export default class extends BaseSeeder {
         pdfLink: 'https://example.com/etranger.pdf',
         abstract:
           'Meursault, un employé de bureau à Alger, tue un Arabe et doit affronter la justice.',
-        epubBlob: epubBuffer3,
         editor: 'Gallimard',
         editionYear: 1942,
         imagePath: '/images/etranger.jpg',
@@ -97,7 +56,6 @@ export default class extends BaseSeeder {
         pdfLink: 'https://example.com/harry-potter-1.pdf',
         abstract:
           "Harry Potter découvre qu'il est un sorcier et entre à l'école de magie Poudlard.",
-        epubBlob: epubBuffer4,
         editor: 'Gallimard Jeunesse',
         editionYear: 1997,
         imagePath: '/images/harry-potter-1.jpg',
@@ -111,7 +69,6 @@ export default class extends BaseSeeder {
         pdfLink: 'https://example.com/lotr.pdf',
         abstract:
           'Frodon Sacquet doit détruire un anneau maléfique pour sauver la Terre du Milieu.',
-        epubBlob: epubBuffer5,
         editor: 'Allen & Unwin',
         editionYear: 1954,
         imagePath: '/images/lotr.jpg',
@@ -125,7 +82,6 @@ export default class extends BaseSeeder {
         pdfLink: 'https://example.com/sapiens.pdf',
         abstract:
           "Une exploration fascinante de l'histoire de l'espèce humaine depuis ses origines.",
-        epubBlob: epubBuffer6,
         editor: 'Albin Michel',
         editionYear: 2011,
         imagePath: '/images/sapiens.jpg',
@@ -139,7 +95,6 @@ export default class extends BaseSeeder {
         pdfLink: 'https://example.com/etranger.pdf',
         abstract:
           'Meursault traverse l’absurdité de la vie moderne et fait face aux conséquences d’un acte irrationnel.',
-        epubBlob: epubBuffer3,
         editor: 'Gallimard',
         editionYear: 1942,
         imagePath: '/covers/generic_cover.jpg',
@@ -153,7 +108,6 @@ export default class extends BaseSeeder {
         pdfLink: 'https://example.com/communist-manifesto.pdf',
         abstract:
           'Introduction fondamentale au matérialisme historique et à la critique du capitalisme.',
-        epubBlob: epubBuffer1,
         editor: 'Penguin Classics',
         editionYear: 1848,
         imagePath: '/covers/generic_cover.jpg',
@@ -167,7 +121,6 @@ export default class extends BaseSeeder {
         pdfLink: 'https://example.com/castro.pdf',
         abstract:
           'Autobiographie détaillée du leader cubain retraçant révolution, politique et idéologie.',
-        epubBlob: null,
         editor: 'Scribner',
         editionYear: 2006,
         imagePath: '/covers/generic_cover.jpg',
@@ -180,7 +133,6 @@ export default class extends BaseSeeder {
         numberOfPages: 320,
         pdfLink: 'https://example.com/gladio.pdf',
         abstract: 'Enquête sur les réseaux clandestins stay-behind opérés durant la guerre froide.',
-        epubBlob: epubBuffer3,
         editor: 'Verso Books',
         editionYear: 1990,
         imagePath: '/covers/generic_cover.jpg',
@@ -193,7 +145,6 @@ export default class extends BaseSeeder {
         numberOfPages: 240,
         pdfLink: 'https://example.com/asterion.pdf',
         abstract: 'Réinterprétation moderne du mythe crétois d’Astérion et du Minotaure.',
-        epubBlob: epubBuffer4,
         editor: 'Flammarion',
         editionYear: 2003,
         imagePath: '/covers/generic_cover.jpg',
@@ -206,7 +157,6 @@ export default class extends BaseSeeder {
         numberOfPages: 64,
         pdfLink: 'https://example.com/kidpaddle.pdf',
         abstract: "Aventure humoristique inspirée de l'univers des jeux vidéo.",
-        epubBlob: epubBuffer5,
         editor: 'Dupuis',
         editionYear: 1996,
         imagePath: '/covers/generic_cover.jpg',
@@ -219,7 +169,6 @@ export default class extends BaseSeeder {
         numberOfPages: 112,
         pdfLink: 'https://example.com/sartre-petition.pdf',
         abstract: 'Analyse critique d’un texte engagé signé par Sartre en 1977.',
-        epubBlob: null,
         editor: 'Les Temps Modernes',
         editionYear: 1977,
         imagePath: '/covers/generic_cover.jpg',
@@ -232,7 +181,6 @@ export default class extends BaseSeeder {
         numberOfPages: 140,
         pdfLink: 'https://example.com/the-prince.pdf',
         abstract: 'Traité politique fondateur sur le pouvoir, la stratégie et la realpolitik.',
-        epubBlob: epubBuffer1,
         editor: 'Oxford Classics',
         editionYear: 1532,
         imagePath: '/covers/generic_cover.jpg',
@@ -245,7 +193,6 @@ export default class extends BaseSeeder {
         numberOfPages: 368,
         pdfLink: 'https://example.com/maoism.pdf',
         abstract: "Étude moderne sur l'impact des politiques maoïstes sur la santé en Chine.",
-        epubBlob: epubBuffer2,
         editor: 'Cambridge University Press',
         editionYear: 2019,
         imagePath: '/covers/generic_cover.jpg',
@@ -258,7 +205,6 @@ export default class extends BaseSeeder {
         numberOfPages: 816,
         pdfLink: 'https://example.com/capital1.pdf',
         abstract: 'Analyse fondamentale du capitalisme et de la production.',
-        epubBlob: epubBuffer4,
         editor: 'Penguin Classics',
         editionYear: 1867,
         imagePath: '/covers/generic_cover.jpg',
@@ -271,7 +217,6 @@ export default class extends BaseSeeder {
         numberOfPages: 112,
         pdfLink: 'https://example.com/art-of-war.pdf',
         abstract: 'Classique de stratégie militaire et de psychologie du conflit.',
-        epubBlob: epubBuffer5,
         editor: 'Shambhala',
         editionYear: -500,
         imagePath: '/covers/generic_cover.jpg',

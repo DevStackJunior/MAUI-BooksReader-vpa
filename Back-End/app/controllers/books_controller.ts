@@ -79,6 +79,9 @@ export default class BooksController {
       .preload('comment')
     return response.ok(books)
   }
+  /*
+   * Create a book
+   */
   async store({ request, auth, response }: HttpContext) {
     const user = auth.user!
     const data = request.only([

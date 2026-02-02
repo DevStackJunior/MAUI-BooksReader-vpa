@@ -11,7 +11,8 @@ export default class extends BaseSchema {
       table.specificType('number_of_pages', 'smallint')
       table.string('pdf_link')
       table.text('abstract')
-      // LONGBLOB EPUB BLOB PATH RETHRIEVAL
+      // LUCID ORM doesn't take in charge the LONGBLOB Format
+      // Rethrieves epub_blob as a binary format file
       table.specificType('epub_blob', 'LONGBLOB').nullable()
       table.string('editor')
       table.specificType('edition_year', 'smallint')

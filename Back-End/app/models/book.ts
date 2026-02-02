@@ -18,9 +18,6 @@ export default class Book extends BaseModel {
   declare numberOfPages: number
 
   @column()
-  declare epubBlob: BinaryData
-
-  @column()
   declare pdfLink: string
 
   //résumé du livre
