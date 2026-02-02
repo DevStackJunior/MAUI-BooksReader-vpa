@@ -57,4 +57,8 @@ Le flux binaire est écrit sur le disque local via File.WriteAllBytesAsync() dan
 * **Synchronisation logicielle :** Liaison de la propriété de données avec le moteur d'AdonisJS pour permettre la manipulation et la lecture fluide des fichiers par l'application.
 * **Initialisation automatique :** Utilisation du seeder intégré pour injecter les fichiers par défaut en base de données afin de rendre le projet immédiatement opérationnel.
 
+### Interface Utilisateur MAUI -> Back-End AdonisJS (Engine)
 
+* **Sélection du fichier :** Utilisation de l'explorateur natif du système via un sélecteur de fichiers pour permettre à l'utilisateur de choisir un ouvrage ePub sur son appareil.
+* **Traitement local :** Conversion du fichier sélectionné en flux binaire par l'application pour préparer son transfert vers le serveur.
+* **Transmission au Backend :** Envoi sécurisé des données vers l'API via une requête réseau pour confirmer l'importation et le stockage final.
