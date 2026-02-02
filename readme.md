@@ -62,13 +62,20 @@ Le flux binaire est écrit sur le disque local via File.WriteAllBytesAsync() dan
   * **Synchronisation logicielle :** Liaison de la propriété de données avec le moteur d'AdonisJS pour permettre la manipulation et la lecture fluide des fichiers par l'application.
   * **Initialisation automatique :** Utilisation du seeder intégré pour injecter les fichiers par défaut en base de données afin de rendre le projet immédiatement opérationnel.
 
-REALISER SEEDER INTELLIGENT SUR BOOK TABLE -> Vérifiant si la table bookepub est complêtée ou non. Si complète (epub/LONGBLOB existant) render automatiquement les propriétés de book table (titre, description auteur...) à null 
+---
+
+# A REALISER : 
+1. REALISER SEEDER INTELLIGENT SUR BOOK TABLE -> Vérifiant si la table bookepub est complêtée ou non. Si complète (epub/LONGBLOB existant) render automatiquement les propriétés de book table (titre, description auteur...) à null 
+2. FAIRE PRECEDER L'ORDRE DE SEEDING ET POSSIBLEMENT MIGRATION DE EPUB 
+
+---
 
 ### Interface Utilisateur MAUI -> Back-End AdonisJS (Engine)
 
 * **Sélection du fichier :** Utilisation de l'explorateur natif du système via un sélecteur de fichiers pour permettre à l'utilisateur de choisir un ouvrage ePub sur son appareil.
 * **Traitement local :** Conversion du fichier sélectionné en flux binaire par l'application pour préparer son transfert vers le serveur.
 * **Transmission au Backend :** Envoi sécurisé des données vers l'API via une requête réseau pour confirmer l'importation et le stockage final.
+
 
 
 
