@@ -89,6 +89,19 @@
           }
         }
       },
+      "HtmlAgilityPack/1.12.4": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0/HtmlAgilityPack.dll": {
+            "related": ".deps.json;.pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0/HtmlAgilityPack.dll": {
+            "related": ".deps.json;.pdb;.xml"
+          }
+        }
+      },
       "Microsoft.Extensions.Configuration/9.0.5": {
         "type": "package",
         "dependencies": {
@@ -517,6 +530,19 @@
         "type": "package",
         "build": {
           "build/Microsoft.NET.ILLink.Tasks.props": {}
+        }
+      },
+      "VersOne.Epub/3.3.5": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/VersOne.Epub.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/VersOne.Epub.dll": {
+            "related": ".xml"
+          }
         }
       },
       "Xamarin.Android.Glide/4.16.0.12": {
@@ -2473,6 +2499,19 @@
           }
         }
       },
+      "HtmlAgilityPack/1.12.4": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0/HtmlAgilityPack.dll": {
+            "related": ".deps.json;.pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0/HtmlAgilityPack.dll": {
+            "related": ".deps.json;.pdb;.xml"
+          }
+        }
+      },
       "Microsoft.Extensions.Configuration/9.0.5": {
         "type": "package",
         "dependencies": {
@@ -2901,6 +2940,19 @@
         "type": "package",
         "build": {
           "build/Microsoft.NET.ILLink.Tasks.props": {}
+        }
+      },
+      "VersOne.Epub/3.3.5": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/VersOne.Epub.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/VersOne.Epub.dll": {
+            "related": ".xml"
+          }
         }
       },
       "Xamarin.Android.Glide/4.16.0.12": {
@@ -4857,6 +4909,19 @@
           }
         }
       },
+      "HtmlAgilityPack/1.12.4": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0/HtmlAgilityPack.dll": {
+            "related": ".deps.json;.pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0/HtmlAgilityPack.dll": {
+            "related": ".deps.json;.pdb;.xml"
+          }
+        }
+      },
       "Microsoft.Extensions.Configuration/9.0.5": {
         "type": "package",
         "dependencies": {
@@ -5285,6 +5350,19 @@
         "type": "package",
         "build": {
           "build/Microsoft.NET.ILLink.Tasks.props": {}
+        }
+      },
+      "VersOne.Epub/3.3.5": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/VersOne.Epub.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/VersOne.Epub.dll": {
+            "related": ".xml"
+          }
         }
       },
       "Xamarin.Android.Glide/4.16.0.12": {
@@ -7241,6 +7319,19 @@
           }
         }
       },
+      "HtmlAgilityPack/1.12.4": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0/HtmlAgilityPack.dll": {
+            "related": ".deps.json;.pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0/HtmlAgilityPack.dll": {
+            "related": ".deps.json;.pdb;.xml"
+          }
+        }
+      },
       "Microsoft.Extensions.Configuration/9.0.5": {
         "type": "package",
         "dependencies": {
@@ -7669,6 +7760,19 @@
         "type": "package",
         "build": {
           "build/Microsoft.NET.ILLink.Tasks.props": {}
+        }
+      },
+      "VersOne.Epub/3.3.5": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/VersOne.Epub.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/VersOne.Epub.dll": {
+            "related": ".xml"
+          }
         }
       },
       "Xamarin.Android.Glide/4.16.0.12": {
@@ -9625,6 +9729,19 @@
           }
         }
       },
+      "HtmlAgilityPack/1.12.4": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0/HtmlAgilityPack.dll": {
+            "related": ".deps.json;.pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0/HtmlAgilityPack.dll": {
+            "related": ".deps.json;.pdb;.xml"
+          }
+        }
+      },
       "Microsoft.Extensions.Configuration/9.0.5": {
         "type": "package",
         "dependencies": {
@@ -10053,6 +10170,19 @@
         "type": "package",
         "build": {
           "build/Microsoft.NET.ILLink.Tasks.props": {}
+        }
+      },
+      "VersOne.Epub/3.3.5": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/VersOne.Epub.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/VersOne.Epub.dll": {
+            "related": ".xml"
+          }
         }
       },
       "Xamarin.Android.Glide/4.16.0.12": {
@@ -12009,6 +12139,19 @@
           }
         }
       },
+      "HtmlAgilityPack/1.12.4": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0/HtmlAgilityPack.dll": {
+            "related": ".deps.json;.pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0/HtmlAgilityPack.dll": {
+            "related": ".deps.json;.pdb;.xml"
+          }
+        }
+      },
       "Microsoft.Extensions.Configuration/9.0.5": {
         "type": "package",
         "dependencies": {
@@ -12437,6 +12580,19 @@
         "type": "package",
         "build": {
           "build/Microsoft.NET.ILLink.Tasks.props": {}
+        }
+      },
+      "VersOne.Epub/3.3.5": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/VersOne.Epub.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/VersOne.Epub.dll": {
+            "related": ".xml"
+          }
         }
       },
       "Xamarin.Android.Glide/4.16.0.12": {
@@ -14361,6 +14517,19 @@
           "lib/net9.0-ios18.0/MauiIcons.Material.Rounded.dll": {}
         }
       },
+      "HtmlAgilityPack/1.12.4": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0/HtmlAgilityPack.dll": {
+            "related": ".deps.json;.pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0/HtmlAgilityPack.dll": {
+            "related": ".deps.json;.pdb;.xml"
+          }
+        }
+      },
       "Microsoft.Extensions.Configuration/9.0.5": {
         "type": "package",
         "dependencies": {
@@ -14778,6 +14947,19 @@
         "type": "package",
         "build": {
           "build/Microsoft.NET.ILLink.Tasks.props": {}
+        }
+      },
+      "VersOne.Epub/3.3.5": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/VersOne.Epub.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/VersOne.Epub.dll": {
+            "related": ".xml"
+          }
         }
       }
     },
@@ -14837,6 +15019,19 @@
           "lib/net9.0-ios18.0/MauiIcons.Material.Rounded.dll": {}
         }
       },
+      "HtmlAgilityPack/1.12.4": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0/HtmlAgilityPack.dll": {
+            "related": ".deps.json;.pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0/HtmlAgilityPack.dll": {
+            "related": ".deps.json;.pdb;.xml"
+          }
+        }
+      },
       "Microsoft.Extensions.Configuration/9.0.5": {
         "type": "package",
         "dependencies": {
@@ -15254,6 +15449,19 @@
         "type": "package",
         "build": {
           "build/Microsoft.NET.ILLink.Tasks.props": {}
+        }
+      },
+      "VersOne.Epub/3.3.5": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/VersOne.Epub.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/VersOne.Epub.dll": {
+            "related": ".xml"
+          }
         }
       }
     },
@@ -15313,6 +15521,19 @@
           "lib/net9.0-ios18.0/MauiIcons.Material.Rounded.dll": {}
         }
       },
+      "HtmlAgilityPack/1.12.4": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0/HtmlAgilityPack.dll": {
+            "related": ".deps.json;.pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0/HtmlAgilityPack.dll": {
+            "related": ".deps.json;.pdb;.xml"
+          }
+        }
+      },
       "Microsoft.Extensions.Configuration/9.0.5": {
         "type": "package",
         "dependencies": {
@@ -15730,6 +15951,19 @@
         "type": "package",
         "build": {
           "build/Microsoft.NET.ILLink.Tasks.props": {}
+        }
+      },
+      "VersOne.Epub/3.3.5": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/VersOne.Epub.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/VersOne.Epub.dll": {
+            "related": ".xml"
+          }
         }
       }
     },
@@ -15789,6 +16023,19 @@
           "lib/net9.0-ios18.0/MauiIcons.Material.Rounded.dll": {}
         }
       },
+      "HtmlAgilityPack/1.12.4": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0/HtmlAgilityPack.dll": {
+            "related": ".deps.json;.pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0/HtmlAgilityPack.dll": {
+            "related": ".deps.json;.pdb;.xml"
+          }
+        }
+      },
       "Microsoft.Extensions.Configuration/9.0.5": {
         "type": "package",
         "dependencies": {
@@ -16206,6 +16453,19 @@
         "type": "package",
         "build": {
           "build/Microsoft.NET.ILLink.Tasks.props": {}
+        }
+      },
+      "VersOne.Epub/3.3.5": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/VersOne.Epub.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/VersOne.Epub.dll": {
+            "related": ".xml"
+          }
         }
       }
     },
@@ -16265,6 +16525,19 @@
           "lib/net9.0-ios18.0/MauiIcons.Material.Rounded.dll": {}
         }
       },
+      "HtmlAgilityPack/1.12.4": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0/HtmlAgilityPack.dll": {
+            "related": ".deps.json;.pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0/HtmlAgilityPack.dll": {
+            "related": ".deps.json;.pdb;.xml"
+          }
+        }
+      },
       "Microsoft.Extensions.Configuration/9.0.5": {
         "type": "package",
         "dependencies": {
@@ -16682,6 +16955,19 @@
         "type": "package",
         "build": {
           "build/Microsoft.NET.ILLink.Tasks.props": {}
+        }
+      },
+      "VersOne.Epub/3.3.5": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/VersOne.Epub.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/VersOne.Epub.dll": {
+            "related": ".xml"
+          }
         }
       }
     },
@@ -16741,6 +17027,19 @@
           "lib/net9.0-ios18.0/MauiIcons.Material.Rounded.dll": {}
         }
       },
+      "HtmlAgilityPack/1.12.4": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0/HtmlAgilityPack.dll": {
+            "related": ".deps.json;.pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0/HtmlAgilityPack.dll": {
+            "related": ".deps.json;.pdb;.xml"
+          }
+        }
+      },
       "Microsoft.Extensions.Configuration/9.0.5": {
         "type": "package",
         "dependencies": {
@@ -17159,6 +17458,19 @@
         "build": {
           "build/Microsoft.NET.ILLink.Tasks.props": {}
         }
+      },
+      "VersOne.Epub/3.3.5": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/VersOne.Epub.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/VersOne.Epub.dll": {
+            "related": ".xml"
+          }
+        }
       }
     },
     "net9.0-maccatalyst18.5": {
@@ -17215,6 +17527,19 @@
         },
         "runtime": {
           "lib/net9.0-maccatalyst18.0/MauiIcons.Material.Rounded.dll": {}
+        }
+      },
+      "HtmlAgilityPack/1.12.4": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0/HtmlAgilityPack.dll": {
+            "related": ".deps.json;.pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0/HtmlAgilityPack.dll": {
+            "related": ".deps.json;.pdb;.xml"
+          }
         }
       },
       "Microsoft.Extensions.Configuration/9.0.5": {
@@ -17634,6 +17959,19 @@
         "type": "package",
         "build": {
           "build/Microsoft.NET.ILLink.Tasks.props": {}
+        }
+      },
+      "VersOne.Epub/3.3.5": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/VersOne.Epub.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/VersOne.Epub.dll": {
+            "related": ".xml"
+          }
         }
       }
     },
@@ -17693,6 +18031,19 @@
           "lib/net9.0-maccatalyst18.0/MauiIcons.Material.Rounded.dll": {}
         }
       },
+      "HtmlAgilityPack/1.12.4": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0/HtmlAgilityPack.dll": {
+            "related": ".deps.json;.pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0/HtmlAgilityPack.dll": {
+            "related": ".deps.json;.pdb;.xml"
+          }
+        }
+      },
       "Microsoft.Extensions.Configuration/9.0.5": {
         "type": "package",
         "dependencies": {
@@ -18110,6 +18461,19 @@
         "type": "package",
         "build": {
           "build/Microsoft.NET.ILLink.Tasks.props": {}
+        }
+      },
+      "VersOne.Epub/3.3.5": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/VersOne.Epub.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/VersOne.Epub.dll": {
+            "related": ".xml"
+          }
         }
       }
     },
@@ -18169,6 +18533,19 @@
           "lib/net9.0-maccatalyst18.0/MauiIcons.Material.Rounded.dll": {}
         }
       },
+      "HtmlAgilityPack/1.12.4": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0/HtmlAgilityPack.dll": {
+            "related": ".deps.json;.pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0/HtmlAgilityPack.dll": {
+            "related": ".deps.json;.pdb;.xml"
+          }
+        }
+      },
       "Microsoft.Extensions.Configuration/9.0.5": {
         "type": "package",
         "dependencies": {
@@ -18586,6 +18963,19 @@
         "type": "package",
         "build": {
           "build/Microsoft.NET.ILLink.Tasks.props": {}
+        }
+      },
+      "VersOne.Epub/3.3.5": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/VersOne.Epub.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/VersOne.Epub.dll": {
+            "related": ".xml"
+          }
         }
       }
     },
@@ -18645,6 +19035,19 @@
           "lib/net9.0-maccatalyst18.0/MauiIcons.Material.Rounded.dll": {}
         }
       },
+      "HtmlAgilityPack/1.12.4": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0/HtmlAgilityPack.dll": {
+            "related": ".deps.json;.pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0/HtmlAgilityPack.dll": {
+            "related": ".deps.json;.pdb;.xml"
+          }
+        }
+      },
       "Microsoft.Extensions.Configuration/9.0.5": {
         "type": "package",
         "dependencies": {
@@ -19062,6 +19465,19 @@
         "type": "package",
         "build": {
           "build/Microsoft.NET.ILLink.Tasks.props": {}
+        }
+      },
+      "VersOne.Epub/3.3.5": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/VersOne.Epub.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/VersOne.Epub.dll": {
+            "related": ".xml"
+          }
         }
       }
     },
@@ -19121,6 +19537,19 @@
           "lib/net9.0-maccatalyst18.0/MauiIcons.Material.Rounded.dll": {}
         }
       },
+      "HtmlAgilityPack/1.12.4": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0/HtmlAgilityPack.dll": {
+            "related": ".deps.json;.pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0/HtmlAgilityPack.dll": {
+            "related": ".deps.json;.pdb;.xml"
+          }
+        }
+      },
       "Microsoft.Extensions.Configuration/9.0.5": {
         "type": "package",
         "dependencies": {
@@ -19538,6 +19967,19 @@
         "type": "package",
         "build": {
           "build/Microsoft.NET.ILLink.Tasks.props": {}
+        }
+      },
+      "VersOne.Epub/3.3.5": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/VersOne.Epub.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/VersOne.Epub.dll": {
+            "related": ".xml"
+          }
         }
       }
     },
@@ -19597,6 +20039,19 @@
           "lib/net9.0-maccatalyst18.0/MauiIcons.Material.Rounded.dll": {}
         }
       },
+      "HtmlAgilityPack/1.12.4": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0/HtmlAgilityPack.dll": {
+            "related": ".deps.json;.pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0/HtmlAgilityPack.dll": {
+            "related": ".deps.json;.pdb;.xml"
+          }
+        }
+      },
       "Microsoft.Extensions.Configuration/9.0.5": {
         "type": "package",
         "dependencies": {
@@ -20015,6 +20470,19 @@
         "build": {
           "build/Microsoft.NET.ILLink.Tasks.props": {}
         }
+      },
+      "VersOne.Epub/3.3.5": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/VersOne.Epub.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/VersOne.Epub.dll": {
+            "related": ".xml"
+          }
+        }
       }
     },
     "net9.0-windows10.0.19041": {
@@ -20071,6 +20539,19 @@
         },
         "runtime": {
           "lib/net9.0-windows10.0.19041/MauiIcons.Material.Rounded.dll": {}
+        }
+      },
+      "HtmlAgilityPack/1.12.4": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0/HtmlAgilityPack.dll": {
+            "related": ".deps.json;.pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0/HtmlAgilityPack.dll": {
+            "related": ".deps.json;.pdb;.xml"
+          }
         }
       },
       "Microsoft.Extensions.Configuration/9.0.5": {
@@ -20741,6 +21222,19 @@
             "rid": "win-x86"
           }
         }
+      },
+      "VersOne.Epub/3.3.5": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/VersOne.Epub.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/VersOne.Epub.dll": {
+            "related": ".xml"
+          }
+        }
       }
     },
     "net9.0-windows10.0.19041/android-arm64": {
@@ -20797,6 +21291,19 @@
         },
         "runtime": {
           "lib/net9.0-windows10.0.19041/MauiIcons.Material.Rounded.dll": {}
+        }
+      },
+      "HtmlAgilityPack/1.12.4": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0/HtmlAgilityPack.dll": {
+            "related": ".deps.json;.pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0/HtmlAgilityPack.dll": {
+            "related": ".deps.json;.pdb;.xml"
+          }
         }
       },
       "Microsoft.Extensions.Configuration/9.0.5": {
@@ -21404,6 +21911,19 @@
         "build": {
           "buildTransitive/Microsoft.WindowsAppSDK.props": {},
           "buildTransitive/Microsoft.WindowsAppSDK.targets": {}
+        }
+      },
+      "VersOne.Epub/3.3.5": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/VersOne.Epub.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/VersOne.Epub.dll": {
+            "related": ".xml"
+          }
         }
       }
     },
@@ -21463,6 +21983,19 @@
           "lib/net9.0-windows10.0.19041/MauiIcons.Material.Rounded.dll": {}
         }
       },
+      "HtmlAgilityPack/1.12.4": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0/HtmlAgilityPack.dll": {
+            "related": ".deps.json;.pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0/HtmlAgilityPack.dll": {
+            "related": ".deps.json;.pdb;.xml"
+          }
+        }
+      },
       "Microsoft.Extensions.Configuration/9.0.5": {
         "type": "package",
         "dependencies": {
@@ -22068,6 +22601,19 @@
         "build": {
           "buildTransitive/Microsoft.WindowsAppSDK.props": {},
           "buildTransitive/Microsoft.WindowsAppSDK.targets": {}
+        }
+      },
+      "VersOne.Epub/3.3.5": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/VersOne.Epub.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/VersOne.Epub.dll": {
+            "related": ".xml"
+          }
         }
       }
     },
@@ -22127,6 +22673,19 @@
           "lib/net9.0-windows10.0.19041/MauiIcons.Material.Rounded.dll": {}
         }
       },
+      "HtmlAgilityPack/1.12.4": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0/HtmlAgilityPack.dll": {
+            "related": ".deps.json;.pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0/HtmlAgilityPack.dll": {
+            "related": ".deps.json;.pdb;.xml"
+          }
+        }
+      },
       "Microsoft.Extensions.Configuration/9.0.5": {
         "type": "package",
         "dependencies": {
@@ -22732,6 +23291,19 @@
         "build": {
           "buildTransitive/Microsoft.WindowsAppSDK.props": {},
           "buildTransitive/Microsoft.WindowsAppSDK.targets": {}
+        }
+      },
+      "VersOne.Epub/3.3.5": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/VersOne.Epub.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/VersOne.Epub.dll": {
+            "related": ".xml"
+          }
         }
       }
     },
@@ -22791,6 +23363,19 @@
           "lib/net9.0-windows10.0.19041/MauiIcons.Material.Rounded.dll": {}
         }
       },
+      "HtmlAgilityPack/1.12.4": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0/HtmlAgilityPack.dll": {
+            "related": ".deps.json;.pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0/HtmlAgilityPack.dll": {
+            "related": ".deps.json;.pdb;.xml"
+          }
+        }
+      },
       "Microsoft.Extensions.Configuration/9.0.5": {
         "type": "package",
         "dependencies": {
@@ -23397,6 +23982,19 @@
           "buildTransitive/Microsoft.WindowsAppSDK.props": {},
           "buildTransitive/Microsoft.WindowsAppSDK.targets": {}
         }
+      },
+      "VersOne.Epub/3.3.5": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/VersOne.Epub.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/VersOne.Epub.dll": {
+            "related": ".xml"
+          }
+        }
       }
     },
     "net9.0-windows10.0.19041/win10-x64": {
@@ -23453,6 +24051,19 @@
         },
         "runtime": {
           "lib/net9.0-windows10.0.19041/MauiIcons.Material.Rounded.dll": {}
+        }
+      },
+      "HtmlAgilityPack/1.12.4": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0/HtmlAgilityPack.dll": {
+            "related": ".deps.json;.pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0/HtmlAgilityPack.dll": {
+            "related": ".deps.json;.pdb;.xml"
+          }
         }
       },
       "Microsoft.Extensions.Configuration/9.0.5": {
@@ -24071,6 +24682,19 @@
           "buildTransitive/Microsoft.WindowsAppSDK.props": {},
           "buildTransitive/Microsoft.WindowsAppSDK.targets": {}
         }
+      },
+      "VersOne.Epub/3.3.5": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/VersOne.Epub.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/VersOne.Epub.dll": {
+            "related": ".xml"
+          }
+        }
       }
     }
   },
@@ -24170,6 +24794,51 @@
         "lib/net8.0-android34.0/GoogleGson.dll",
         "lib/net8.0-android34.0/GoogleGson.pdb",
         "lib/net8.0-android34.0/GoogleGson.xml",
+        "readme.md"
+      ]
+    },
+    "HtmlAgilityPack/1.12.4": {
+      "sha512": "ljqvBabvFwKoLniuoQKO8b5bJfJweKLs4fUNS/V5dsvpo0A8MlJqxxn9XVmP2DaskbUXty6IYaWAi1SArGIMeQ==",
+      "type": "package",
+      "path": "htmlagilitypack/1.12.4",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "htmlagilitypack.1.12.4.nupkg.sha512",
+        "htmlagilitypack.nuspec",
+        "lib/Net35/HtmlAgilityPack.dll",
+        "lib/Net35/HtmlAgilityPack.pdb",
+        "lib/Net35/HtmlAgilityPack.xml",
+        "lib/Net40-client/HtmlAgilityPack.dll",
+        "lib/Net40-client/HtmlAgilityPack.pdb",
+        "lib/Net40-client/HtmlAgilityPack.xml",
+        "lib/Net40/HtmlAgilityPack.XML",
+        "lib/Net40/HtmlAgilityPack.dll",
+        "lib/Net40/HtmlAgilityPack.pdb",
+        "lib/Net45/HtmlAgilityPack.XML",
+        "lib/Net45/HtmlAgilityPack.dll",
+        "lib/Net45/HtmlAgilityPack.pdb",
+        "lib/NetCore45/HtmlAgilityPack.XML",
+        "lib/NetCore45/HtmlAgilityPack.dll",
+        "lib/NetCore45/HtmlAgilityPack.pdb",
+        "lib/net7.0/HtmlAgilityPack.deps.json",
+        "lib/net7.0/HtmlAgilityPack.dll",
+        "lib/net7.0/HtmlAgilityPack.pdb",
+        "lib/net7.0/HtmlAgilityPack.xml",
+        "lib/netstandard2.0/HtmlAgilityPack.deps.json",
+        "lib/netstandard2.0/HtmlAgilityPack.dll",
+        "lib/netstandard2.0/HtmlAgilityPack.pdb",
+        "lib/netstandard2.0/HtmlAgilityPack.xml",
+        "lib/portable-net45+netcore45+wp8+MonoAndroid+MonoTouch/HtmlAgilityPack.XML",
+        "lib/portable-net45+netcore45+wp8+MonoAndroid+MonoTouch/HtmlAgilityPack.dll",
+        "lib/portable-net45+netcore45+wp8+MonoAndroid+MonoTouch/HtmlAgilityPack.pdb",
+        "lib/portable-net45+netcore45+wpa81+wp8+MonoAndroid+MonoTouch/HtmlAgilityPack.XML",
+        "lib/portable-net45+netcore45+wpa81+wp8+MonoAndroid+MonoTouch/HtmlAgilityPack.dll",
+        "lib/portable-net45+netcore45+wpa81+wp8+MonoAndroid+MonoTouch/HtmlAgilityPack.pdb",
+        "lib/uap10.0/HtmlAgilityPack.XML",
+        "lib/uap10.0/HtmlAgilityPack.dll",
+        "lib/uap10.0/HtmlAgilityPack.pdb",
+        "lib/uap10.0/HtmlAgilityPack.pri",
         "readme.md"
       ]
     },
@@ -26251,6 +26920,23 @@
         "tools/x86/GenXbf.dll"
       ]
     },
+    "VersOne.Epub/3.3.5": {
+      "sha512": "IZF7Po8G15xLKrhN9V+E+uHBCMkOJFZmtA5L+dLaoBw9GNUsQzSRIgAsG6ImLa2vew5AVjH36kOMj8eNkNvNlQ==",
+      "type": "package",
+      "path": "versone.epub/3.3.5",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net46/VersOne.Epub.dll",
+        "lib/net46/VersOne.Epub.xml",
+        "lib/netstandard1.3/VersOne.Epub.dll",
+        "lib/netstandard1.3/VersOne.Epub.xml",
+        "lib/netstandard2.0/VersOne.Epub.dll",
+        "lib/netstandard2.0/VersOne.Epub.xml",
+        "versone.epub.3.3.5.nupkg.sha512",
+        "versone.epub.nuspec"
+      ]
+    },
     "Xamarin.Android.Glide/4.16.0.12": {
       "sha512": "ReaxF/UeWqIMdg3NhfrVwugKy8UO++HUH6qCtECWwbyOAXtkgI1HEFg0uPf9mQMyKTHgF7dAQP1rAryvc54VyA==",
       "type": "package",
@@ -28113,32 +28799,40 @@
       "AathifMahir.Maui.MauiIcons.Fluent >= 5.0.0",
       "AathifMahir.Maui.MauiIcons.Fluent.Filled >= 5.0.0",
       "AathifMahir.Maui.MauiIcons.Material.Rounded >= 5.0.0",
+      "HtmlAgilityPack >= 1.12.4",
       "Microsoft.Extensions.Logging.Debug >= 9.0.0",
       "Microsoft.Maui.Controls >= 9.0.82",
-      "Microsoft.NET.ILLink.Tasks >= 9.0.9"
+      "Microsoft.NET.ILLink.Tasks >= 9.0.9",
+      "VersOne.Epub >= 3.3.5"
     ],
     "net9.0-ios18.5": [
       "AathifMahir.Maui.MauiIcons.Fluent >= 5.0.0",
       "AathifMahir.Maui.MauiIcons.Fluent.Filled >= 5.0.0",
       "AathifMahir.Maui.MauiIcons.Material.Rounded >= 5.0.0",
+      "HtmlAgilityPack >= 1.12.4",
       "Microsoft.Extensions.Logging.Debug >= 9.0.0",
       "Microsoft.Maui.Controls >= 9.0.82",
-      "Microsoft.NET.ILLink.Tasks >= 9.0.9"
+      "Microsoft.NET.ILLink.Tasks >= 9.0.9",
+      "VersOne.Epub >= 3.3.5"
     ],
     "net9.0-maccatalyst18.5": [
       "AathifMahir.Maui.MauiIcons.Fluent >= 5.0.0",
       "AathifMahir.Maui.MauiIcons.Fluent.Filled >= 5.0.0",
       "AathifMahir.Maui.MauiIcons.Material.Rounded >= 5.0.0",
+      "HtmlAgilityPack >= 1.12.4",
       "Microsoft.Extensions.Logging.Debug >= 9.0.0",
       "Microsoft.Maui.Controls >= 9.0.82",
-      "Microsoft.NET.ILLink.Tasks >= 9.0.9"
+      "Microsoft.NET.ILLink.Tasks >= 9.0.9",
+      "VersOne.Epub >= 3.3.5"
     ],
     "net9.0-windows10.0.19041": [
       "AathifMahir.Maui.MauiIcons.Fluent >= 5.0.0",
       "AathifMahir.Maui.MauiIcons.Fluent.Filled >= 5.0.0",
       "AathifMahir.Maui.MauiIcons.Material.Rounded >= 5.0.0",
+      "HtmlAgilityPack >= 1.12.4",
       "Microsoft.Extensions.Logging.Debug >= 9.0.0",
-      "Microsoft.Maui.Controls >= 9.0.82"
+      "Microsoft.Maui.Controls >= 9.0.82",
+      "VersOne.Epub >= 3.3.5"
     ]
   },
   "packageFolders": {
@@ -28220,6 +28914,10 @@
             "target": "Package",
             "version": "[5.0.0, )"
           },
+          "HtmlAgilityPack": {
+            "target": "Package",
+            "version": "[1.12.4, )"
+          },
           "Microsoft.Extensions.Logging.Debug": {
             "target": "Package",
             "version": "[9.0.0, )"
@@ -28233,6 +28931,10 @@
             "target": "Package",
             "version": "[9.0.9, )",
             "autoReferenced": true
+          },
+          "VersOne.Epub": {
+            "target": "Package",
+            "version": "[3.3.5, )"
           }
         },
         "imports": [
@@ -28271,6 +28973,10 @@
             "target": "Package",
             "version": "[5.0.0, )"
           },
+          "HtmlAgilityPack": {
+            "target": "Package",
+            "version": "[1.12.4, )"
+          },
           "Microsoft.Extensions.Logging.Debug": {
             "target": "Package",
             "version": "[9.0.0, )"
@@ -28284,6 +28990,10 @@
             "target": "Package",
             "version": "[9.0.9, )",
             "autoReferenced": true
+          },
+          "VersOne.Epub": {
+            "target": "Package",
+            "version": "[3.3.5, )"
           }
         },
         "imports": [
@@ -28322,6 +29032,10 @@
             "target": "Package",
             "version": "[5.0.0, )"
           },
+          "HtmlAgilityPack": {
+            "target": "Package",
+            "version": "[1.12.4, )"
+          },
           "Microsoft.Extensions.Logging.Debug": {
             "target": "Package",
             "version": "[9.0.0, )"
@@ -28335,6 +29049,10 @@
             "target": "Package",
             "version": "[9.0.9, )",
             "autoReferenced": true
+          },
+          "VersOne.Epub": {
+            "target": "Package",
+            "version": "[3.3.5, )"
           }
         },
         "imports": [
@@ -28374,6 +29092,10 @@
             "target": "Package",
             "version": "[5.0.0, )"
           },
+          "HtmlAgilityPack": {
+            "target": "Package",
+            "version": "[1.12.4, )"
+          },
           "Microsoft.Extensions.Logging.Debug": {
             "target": "Package",
             "version": "[9.0.0, )"
@@ -28381,6 +29103,10 @@
           "Microsoft.Maui.Controls": {
             "target": "Package",
             "version": "[9.0.82, )"
+          },
+          "VersOne.Epub": {
+            "target": "Package",
+            "version": "[3.3.5, )"
           }
         },
         "imports": [
