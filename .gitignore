@@ -1,1 +1,6 @@
-".vs/" 
+**/.vs/
+**/*.db
+**/*.db-shm
+**/*.db-wal
+**/*.dtbcache.v2
+**/*.vsidx
