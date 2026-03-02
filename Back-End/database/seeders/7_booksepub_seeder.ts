@@ -1,44 +1,115 @@
 import { BaseSeeder } from '@adonisjs/lucid/seeders'
-import db from '@adonisjs/lucid/services/db'
-import fs from 'node:fs'
+import fs from 'node:fs/promises'
 import path from 'node:path'
+import Book from '#models/book'
+import BookEpub from '#models/book_epub'
 
-export default class extends BaseSeeder {
+export default class BookEpubSeeder extends BaseSeeder {
+  private readonly epubDir = path.join(process.cwd(), 'Docs', 'EPUB', 'books')
+
   async run() {
-    const tableName = 'booksepub'
-    const directoryPath = path.join(process.cwd(), 'database/seeders/assets')
+    console.log('📚 Démarrage du seeder BookEpub...')
 
-    // 1. Scanner le dossier et filtrer les fichiers .epub
-    const epubFiles = fs.readdirSync(directoryPath).filter((file) => file.endsWith('.epub'))
+    // ─────────────────────────────────────────────
+    // ÉTAPE 1 : book_epubs déjà peuplée ?
+    // ─────────────────────────────────────────────
+    const existingEpub = await BookEpub.query().whereNotNull('epub_blob').first()
 
-    if (epubFiles.length === 0) {
-      console.log('--- [Seeder] Aucun fichier .epub trouvé dans /database/seeders ---')
+    if (existingEpub) {
+      console.log('✅ La table book_epubs contient déjà des EPUBs.')
+      console.log('🔄 Mise à null des champs de la table books...')
+      await this.nullifyBooks()
+      console.log('✔️  Champs books mis à null avec succès.')
       return
     }
 
-    console.log(`--- [Seeder] Début de l'importation de ${epubFiles.length} fichier(s) ---`)
+    // ─────────────────────────────────────────────
+    // ÉTAPE 2 : Vérifier que le dossier epub existe
+    // ─────────────────────────────────────────────
+    const dirExists = await fs.stat(this.epubDir).catch(() => null)
 
-    // 2. Boucle de traitement (Itération)
-    for (const fileName of epubFiles) {
+    if (!dirExists) {
+      console.error(`❌ Dossier introuvable : ${this.epubDir}`)
+      return
+    }
+
+    // ─────────────────────────────────────────────
+    // ÉTAPE 3 : Lister les fichiers .epub
+    // ─────────────────────────────────────────────
+    const allFiles = await fs.readdir(this.epubDir)
+    const epubFiles = allFiles.filter((f) => f.endsWith('.epub'))
+
+    if (epubFiles.length === 0) {
+      console.warn('⚠️  Aucun fichier .epub trouvé dans le dossier.')
+      return
+    }
+
+    console.log(`📖 ${epubFiles.length} fichier(s) .epub détecté(s).`)
+
+    // ─────────────────────────────────────────────
+    // ÉTAPE 4 : Itération et insertion séquentielle
+    // ─────────────────────────────────────────────
+    let success = 0
+    let failed = 0
+
+    for (const filename of epubFiles) {
+      const filePath = path.join(this.epubDir, filename)
+
       try {
-        const fullPath = path.join(directoryPath, fileName)
+        // Vérification physique du fichier
+        const fileStat = await fs.stat(filePath)
+        if (!fileStat.isFile()) continue
 
-        // Lecture binaire du fichier
-        const fileBuffer = fs.readFileSync(fullPath)
+        // Lecture unitaire (optimisation mémoire)
+        const buffer = await fs.readFile(filePath)
+        const epubBlob = new Uint8Array(buffer)
 
-        // Insertion en base de données
-        await db.table(tableName).insert({
-          epub_blob: fileBuffer,
-          // Vous pourriez aussi insérer le nom du fichier ici :
-          // title: fileName.replace('.epub', '')
+        // Création du book avec tous les champs à null
+        const book = await Book.create({
+          title: null,
+          numberOfPages: null,
+          pdfLink: null,
+          abstract: null,
+          editor: null,
+          editionYear: null,
+          imagePath: null,
+          categoryId: null,
+          writerId: null,
+          userId: null,
         })
 
-        console.log(`✅ Succès : ${fileName}`)
+        // Insertion de l'epub lié au book
+        await BookEpub.create({
+          bookId: book.id,
+          epubBlob,
+        })
+
+        console.log(`  ✅ [${filename}] importé (book #${book.id})`)
+        success++
       } catch (error) {
-        console.error(`❌ Erreur lors de l'importation de ${fileName} :`, error.message)
+        console.error(`  ❌ [${filename}] échec : ${(error as Error).message}`)
+        failed++
       }
     }
 
-    console.log('--- [Seeder] Importation terminée ---')
+    console.log(`\n📊 Résultat : ${success} succès / ${failed} échec(s)`)
+  }
+
+  // ─────────────────────────────────────────────
+  // Nullifier tous les champs de books
+  // ─────────────────────────────────────────────
+  private async nullifyBooks() {
+    await Book.query().update({
+      title: null,
+      numberOfPages: null,
+      pdfLink: null,
+      abstract: null,
+      editor: null,
+      editionYear: null,
+      imagePath: null,
+      categoryId: null,
+      writerId: null,
+      userId: null,
+    })
   }
 }

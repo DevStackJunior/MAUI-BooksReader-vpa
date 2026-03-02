@@ -11,28 +11,28 @@ export default class Book extends BaseModel {
   declare id: number
 
   @column()
-  declare title: string
+  declare title: string | null
 
   //number = Small Int
   @column()
-  declare numberOfPages: number
+  declare numberOfPages: number | null
 
   @column()
-  declare pdfLink: string
+  declare pdfLink: string | null
 
   //résumé du livre
   @column()
-  declare abstract: string
+  declare abstract: string | null
 
   @column()
-  declare editor: string
+  declare editor: string | null
 
   //number = Small Int
   @column()
-  declare editionYear: number
+  declare editionYear: number | null
 
   @column()
-  declare imagePath: string
+  declare imagePath: string | null
 
   //Récupération des 3 clefs étrangères
   @column()
