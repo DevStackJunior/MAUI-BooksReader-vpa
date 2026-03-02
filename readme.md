@@ -65,8 +65,7 @@ Le flux binaire est écrit sur le disque local via File.WriteAllBytesAsync() dan
 ---
 
 # A REALISER : 
-1. REALISER SEEDER INTELLIGENT SUR BOOK TABLE -> Vérifiant si la table bookepub est complêtée ou non. Si complète (epub/LONGBLOB existant) render automatiquement les propriétés de book table (titre, description auteur...) à null 
-2. FAIRE PRECEDER L'ORDRE DE SEEDING ET POSSIBLEMENT MIGRATION DE EPUB 
+
 
 ---
 
@@ -75,6 +74,7 @@ Le flux binaire est écrit sur le disque local via File.WriteAllBytesAsync() dan
 * **Sélection du fichier :** Utilisation de l'explorateur natif du système via un sélecteur de fichiers pour permettre à l'utilisateur de choisir un ouvrage ePub sur son appareil.
 * **Traitement local :** Conversion du fichier sélectionné en flux binaire par l'application pour préparer son transfert vers le serveur.
 * **Transmission au Backend :** Envoi sécurisé des données vers l'API via une requête réseau pour confirmer l'importation et le stockage final.
+
 
 
 
